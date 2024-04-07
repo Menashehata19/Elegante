@@ -1,46 +1,56 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Notification Example</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
 </head>
 <body>
 
-<button onclick="showNotification()">Send Notification</button>
-
 <script>
-function showNotification() {
-  // Check if the browser supports notifications
-  if (!("Notification" in window)) {
-    alert("This browser does not support desktop notification");
-  } else {
-    // Request permission for notification
-    Notification.requestPermission().then(function(permission) {
-      if (permission === "granted") {
-        // Create a notification
-        var notification = new Notification("Hello!", {
-          body: "This is a notification from your website.",
-          icon: "images.jpeg" // Path to your icon
+  (async () => {
+    // create and show the notification
+    const showNotification = () => {
+        // create a new notification
+        const notification = new Notification('JavaScript Notification API', {
+            body: 'This is a JavaScript Notification API demo',
+            icon: './img/js.png'
         });
 
-        // Optional: Add event listeners for user interaction with the notification
-        notification.onclick = function(event) {
-          // Handle notification click
-          window.focus(); // Bring focus to the window/tab that generated the notification
-          notification.close(); // Close the notification
-          // You can redirect to a specific URL or perform other actions here
-        };
+        // close the notification after 10 seconds
+        setTimeout(() => {
+            notification.close();
+        }, 10 * 1000);
 
-        // Optional: Close the notification after a certain time
-        setTimeout(notification.close.bind(notification), 1000); // Close after 5 seconds
-      } else {
-        alert("You have blocked notifications. Please enable them in your browser settings.");
-      }
-    });
-  }
-}
-</script>
+        // navigate to a URL when clicked
+        notification.addEventListener('click', () => {
 
+            window.open('https://www.javascripttutorial.net/web-apis/javascript-notification/', '_blank');
+        });
+    }
+
+    // show an error message
+    const showError = () => {
+        const error = document.querySelector('.error');
+        error.style.display = 'block';
+        error.textContent = 'You blocked the notifications';
+    }
+
+    // check notification permission
+    let granted = false;
+
+    if (Notification.permission === 'granted') {
+        granted = true;
+    } else if (Notification.permission !== 'denied') {
+        let permission = await Notification.requestPermission();
+        granted = permission === 'granted' ? true : false;
+    }
+
+    // show notification or error
+    granted ? showNotification() : showError();
+
+})();
+</script>  
 </body>
 </html>
