@@ -1,6 +1,6 @@
 body{
   margin: 0px;
-  background: #00224D;
+  background: rgb(0, 34, 77, 1)
   
   
   
@@ -139,6 +139,15 @@ p.aboutte{
 
 
 
+.l0img{
+  width: 135px;
+  margin-top: -70px;
+}
+
+.fleximgh{
+  display: flex;
+  justify-content: center;
+}
 
 
 
@@ -173,7 +182,6 @@ p.aboutte{
 }
   
 }
-
 
 
 
