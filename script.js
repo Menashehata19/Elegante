@@ -1,3 +1,6 @@
+document.documentElement.setAttribute('class', 'notranslate');
+
+
 let svg = document.getElementById('btnme');
 
 let menu = document.getElementById('menushow');
