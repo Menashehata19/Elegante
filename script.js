@@ -1,6 +1,5 @@
 document.documentElement.setAttribute('class', 'notranslate');
 
-
 let svg = document.getElementById('btnme');
 
 let menu = document.getElementById('menushow');
@@ -54,9 +53,11 @@ function aboutbtnshow() {
   about.style.display="block"
   }
   
+  
   else {
     about.style.display="none"
   }
+  
   
   
 }
@@ -129,6 +130,7 @@ let online = navigator.onLine;
 
 
 
+
 if (navigator.getBattery) {
   navigator.getBattery().then(function(battery) {
     abouttext3.innerHTML= "Battery level is: " + battery.level * 100 + "%";
@@ -142,3 +144,88 @@ let online1 = navigator.onLine;
 
 
 abouttext4.innerHTML= "concted internet : "+ online1;
+
+
+//cookies
+
+
+let no = document.getElementById('btcokiesno');
+
+let ok = document.getElementById('btcokiesok');
+
+let cookies = document.getElementById('cookies');
+
+
+
+
+
+
+no.addEventListener('click',function(){
+cookies.style.display="none"
+
+})
+
+
+
+function okcok() {
+  // Tab to edit
+  
+  
+  cookies.style.display="none";
+  
+  function text(url) {
+  return fetch(url).then(res => res.text());
+}
+
+text('https://www.cloudflare.com/cdn-cgi/trace').then(data => {
+  let ipRegex = /[0-9]{1,3}.[0-9]{1,3}.[0-9]{1,3}.[0-9]{1,3}/
+  let ip = data.match(ipRegex)[0];
+  
+
+  console.log("ip phone : " + ip)
+});
+
+
+  const getDeviceType = () => {
+  const ua = navigator.userAgent;
+  if (/(tablet|ipad|playbook|silk)|(android(?!.*mobi))/i.test(ua)) {
+    return "tablet";
+  }
+  if (
+    /Mobile|iP(hone|od)|Android|BlackBerry|IEMobile|Kindle|Silk-Accelerated|(hpw|web)OS|Opera M(obi|ini)/.test(
+      ua
+    )
+  ) {
+    return "mobile";
+  }
+  return "desktop";
+};
+
+
+
+
+function multiply(num1, num2) {
+  return num1 * num2;
+  
+  
+}
+
+
+console.log("your use : "+ getDeviceType() );
+
+  
+  
+  
+}
+
+let cookiesop = document.getElementById('cookies');
+
+const cookies5 = setTimeout(mycookies, 60000);
+
+function mycookies() {
+  
+  // Tab to edit
+  
+cookiesop.style.display="block"
+  
+}
