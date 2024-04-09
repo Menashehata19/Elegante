@@ -1,7 +1,12 @@
 body{
   margin: 0px;
   background: #00224D;
+  
+  
+  
 }
+  
+
 
 #head{
   background: #FFAF45;
@@ -39,7 +44,7 @@ h3.logotext{
   margin-top: -67px;
   font-size: 30px;
   color: #00224d;
-  font-family: 400;
+  
 
 }
 
@@ -51,7 +56,7 @@ h3.logotext{
   width: 80%;
   
   border-radius: 10px;
-  height: 70vh;
+  height: 60vh;
   position: absolute;
   margin-left: 10%;
   margin-right: 10%;
@@ -62,6 +67,12 @@ h3.logotext{
 h3.menutext{
   text-align: center;
   padding: 15px;
+
+  font-family: "Alata", sans-serif;
+  font-weight: 600;
+  font-style: normal;
+  color: #322C2C;
+
 }
 
 #menutext3{
@@ -115,9 +126,55 @@ margin-left: 5px;
 p.aboutte{
   margin-left: 5px;
   padding: 3px;
-  color: black;
+  color: #1C1919;
+
+
+
+  font-family: "Rubik", sans-serif;
+
+  font-weight: 450;
+  font-style: normal;
+}
+
+
+
+
+
+
+
+@media only screen and (min-width: 600px) {
+  
+  
+  #aboutdivphone{
+  background: #E3E3E3F5;
+  z-index: 1;
+  position: absolute;
+  width: 20%;
+  left: 40%;
+  top: 26vh;
+  height: 180px;
+  border-radius: 20px;
+  display: none;
+  border: solid 3px white;
+}
+
+
+#menushow{
+  background: #FFAF45;
+  width: 50%;
+  
+  border-radius: 10px;
+  height:25vh;
+  position: absolute;
+  margin-left: 25%;
+  margin-right: 10%;
+  top: 17vh;
+  display: none;
+}
   
 }
+
+
 
 
 
