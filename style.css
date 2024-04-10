@@ -1,9 +1,7 @@
 body{
   margin: 0px;
-  background: rgb(0, 34, 77, 1)
-  
-  
-  
+  background: rgb(0, 34, 77, 1);
+  height: 200vh;
 }
   
 
@@ -195,9 +193,10 @@ p.aboutte{
   border-radius: 20px;
 
   height: 140px;
-  position: relative;
-  top: 60vh;
+  position: fixed;
+  top: 75vh;
   width: 90%;
+  left: 5%;
   margin: auto;
   border: solid 1px ;
   display: none;
@@ -271,7 +270,8 @@ p.aboutte{
    width: 50%;
    margin: auto;
   height: 150px;
-  position: relative;
+  position: fixed;
+  left: 25%;
   top: 85vh;
   }
   
@@ -316,5 +316,52 @@ p.aboutte{
 
 }
 
+
+.cloth1{
+  background: black;
+  position: relative;
+  top: 70px;
+  width: 80%;
+  border-radius: 30px;
+  margin: auto;
+  height: 360px;
+  z-index: -1;
+  background-image: url('FB_IMG_1712758732083.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+
+
+
+.cloth2{
+  background: black;
+  position: relative;
+  top: 90px;
+  width: 80%;
+  border-radius: 30px;
+  margin: auto;
+  height: 360px;
+  z-index: -1;
+  background-image: url('FB_IMG_1712758773303.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+
+
+.cloth3{
+  background: black;
+  position: relative;
+  top: 110px;
+  width: 80%;
+  border-radius: 30px;
+  margin: auto;
+  height: 360px;
+  z-index: -1;
+  background-image: url('FB_IMG_1712758778341.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+}
 
 
